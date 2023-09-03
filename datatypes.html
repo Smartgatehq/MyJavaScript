@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+    <h1>JavaScript Data Types</h1>
+    <h3>JavaScript has 8 Datatypes</h3>
+    <p>1. String <br>
+        2. Number<br>
+        3. Bigint<br>
+        4. Boolean<br>
+        5. Undefined<br>
+        6. Null<br>
+        7. Symbol<br>
+        8. Object</p>
+        
+        <h3>The Object Datatype</h3>
+        <p>The object data type can contain:</p>
+        <p>1. An object<br>
+            2. An array<br>
+            3. A date
+        </p>
+
+        <p><i>Examples</i></p>
+        <p>// Numbers:<br>
+            let length = 16;<br>
+            let weight = 7.5;<br><br>
+            
+            // Strings:<br>
+            let color = "Yellow";<br>
+            let lastName = "Johnson";<br><br>
+            
+            // Booleans<br>
+            let x = true;<br>
+            let y = false;<br><br>
+            
+            // Object:<br>
+            const person = {firstName:"John", lastName:"Doe"};<br><br>
+            
+            // Array object:<br>
+            const cars = ["Saab", "Volvo", "BMW"];<br><br>
+            
+            // Date object:<br>
+            const date = new Date("2022-03-25");
+        </p>
+
+        <h2>Note</h2>
+        <p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+
+        <p><i>Example 1</i></p>
+        
+        <p id="example1"></p>
+
+        <script>
+            // let a = 15 + "Volvo";
+
+           // let a = 16 + 4 + "Volvo";
+
+            let a = "Volvo" + 16 + 4;
+            document.getElementById('example1').innerHTML = a;
+
+        </script>
+
+        <h3>JavaScript Booleans</h3>
+        <p>Booleans can only have two values: true or false.</p>
+        <p>Booleans are often used in conditional testing.</p>
+
+        <p><i>Example 2</i></p>
+
+        <p id="example2"></p>
+
+        <script>
+            let b = 5;
+            let c = 6;
+            let d = 6;
+
+            document.getElementById('example2').innerHTML = 
+            (b == c) + "<br>" + (c == d) + "<br>" + (b >= d);
+
+        </script>
+
+        <h3>JavaScript Arrays</h3>
+
+        <p><i>Example 3</i></p>
+
+        <p id="example3"></p>
+
+        <script>
+            const cars =["BMW", "Honda", "Toyota"];
+
+            // document.getElementById('example3').innerHTML = cars;
+
+            document.getElementById('example3').innerHTML = cars[1];
+        </script>
+
+        <h3>JavaScript Objects</h3>
+        <p>JavaScript objects are written with curly braces {}.</p>
+
+        <p><i>Example 4</i></p>
+
+        <p id="example4"></p>
+
+        <script>
+            const mySon = {firstName:"Nathan", OtherName:"Ose", age:2, eyeColor:"Brown"};
+
+            document.getElementById('example4').innerHTML = 
+            mySon.firstName + mySon.OtherName + " is " + mySon.age + 
+            " years old and he has " + mySon.eyeColor + " eyes";
+
+        </script>
+
+</body>
+</html>

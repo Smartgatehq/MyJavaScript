@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+    <h1>JavaScript String Methods</h1>
+
+    <h3>JavaScript String Length</h3>
+    <p>The length property returns the length of a string:</p>
+
+    <h2><i>Example 1</i></h2>
+
+    <p id="example1"></p>
+
+    <script>
+        let name = "Isidahomen Ose Nathan";
+
+        document.getElementById('example1').innerHTML = name.length;
+    </script>
+
+    <h3>Extracting String Parts</h3>
+    <p>There are 3 methods for extracting a part of a string:</p>
+    <ul>
+        <li>slice(start, end)</li>
+        <li>substring(start, end)</li>
+        <li>substr(start, length)</li>
+    </ul>
+
+    <h3>JavaScript String slice()</h3>
+    <p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+    <p>The method takes 2 parameters: start position, and end position (end not included).</p>
+
+    <h2><i>Example 2</i></h2>
+    <h3>The Slice Method</h3>
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="example2"></p>
+    <script>
+        let car = "Honda, Toyota, Audi";
+        // let part = car.slice(7,13);      
+       // document.getElementById('example2').innerHTML = part;
+
+        // If you omit the second parameter, the method will slice out the rest of the string:
+        // let part = car.slice(7);      
+       // document.getElementById('example2').innerHTML = part;
+
+        // If a parameter is negative, the position is counted from the end of the string:
+        // let part = car.slice(-4);      
+        // document.getElementById('example2').innerHTML = part;
+
+        // This example slices out a portion of a string from position -12 to position -6:
+        // let part = car.slice(-19, -14);      
+        // document.getElementById('example2').innerHTML = part;
+       
+        // <h2>JavaScript String substring()</h2>
+       // document.getElementById("example2").innerHTML = car.substring(7,13);
+
+       // JavaScript String substr()
+       document.getElementById("example2").innerHTML = car.substr(7,6);
+
+    </script>
+
+    <h1>Note</h1>
+    <p>JavaScript counts positions from zero.</p>
+    <p>First position is 0.</p>
+    <p>Second position is 1.</p>
+
+    <h2>JavaScript String substring()</h2>
+    <p>substring() is similar to slice().</p>
+    <p>The difference is that start and end values less than 0 are treated as 0 in substring().</p>
+
+    
+    <h2>Replacing String Content</h2>
+    <p>The replace() method replaces a specified value with another value in a string:</p>
+
+    <h2>Example 3</h2>
+
+    <p>Replace "Ose" with "Nathan" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Click Here</button>
+
+    <p id="example3">Ose is a good boy</p>
+
+    <script>
+        function myFunction() {
+            let text = document.getElementById('example3').innerHTML;
+            document.getElementById('example3').innerHTML =
+            text.replace("Ose","Nathan");
+        }
+    </script>
+
+
+</body>
+</html>

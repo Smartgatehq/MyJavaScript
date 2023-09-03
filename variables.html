@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+
+    <h3>Variables are Containers for Storing Data</h3>
+
+    <p>JavaScript Variables can be declared in 4 ways:</p>
+    <ul>
+        <li>Automatically</li>
+        <li>Using var</li>
+        <li>Using let</li>
+        <li>Using const</li>
+    </ul>
+        <br><br><br>
+
+    <p><i>Example 1</i></p>
+    <p>In this first example, x, y, and z are undeclared variables.</p>
+    <p>They are automatically declared when first used:</p>
+
+    <p id="example1"></p>
+
+    <script>
+        x = 6;
+        y = 7;
+        z = x + y;
+
+        document.getElementById('example1').innerHTML=z;
+    </script>
+
+    <p><i>Example 2</i></p>
+
+    <h2>Note:</h2>
+
+    <p>It is considered good programming practice to always declare variables before use.</p>
+
+    <i><b>Example using var</b></i>
+
+    <p id="example2"></p>
+
+    <script>
+        var a = 10;
+        var b = 5;
+        var c = a * b;
+
+        document.getElementById('example2').innerHTML = "The Value of c is:" + c;
+
+    </script>
+
+
+    <p><i>Example 3</i></p>
+    <h3>Using the Let.</h3>
+
+    <p id="example3"></p>
+
+    <script>
+
+        let d = 100;
+        let e = 5;
+        let f = d/e;
+
+        document.getElementById('example3').innerHTML = "The value of f is:" + f;
+    </script>
+
+
+    <p><i>Example 4</i></p>
+
+    <h4>declaring variables with different methods</h4>
+
+    <p id="example4"></p>
+
+    <script>
+        var Nathan = 20;
+        const Ose = 5;
+
+        let Smart = Nathan + Ose;
+
+        document.getElementById('example4').innerHTML = 
+        "Daddy is " + Smart;
+
+    </script>
+
+
+    <h2>Using the const Keyword</h2>
+
+    <p>You can change the elements of a constant array:</p>
+
+    <p><i>Example 5</i></p>
+
+    <p id="example5"></p>
+
+    <script>
+        // Create an Array:
+        const cars = ["Toyota", "Benz", "Honda"];
+
+        // Change an element:
+        cars[0] = "Audi";
+
+        //Add an element
+        cars.push("BMW");
+
+        //Display the array:
+        document.getElementById('example5').innerHTML = cars;    
+    </script>
+
+    <p><i>Example 6</i></p>
+    <h2>Constant Objects</h2>
+    <p>You can change the properties of a constant object:</p>
+
+    <p id="example6"></p>
+
+    <script>
+        //Creating a Const object
+        const phone = {Type:"Iphone", Model:"ProMax", Color:"White"};
+
+        //change a property
+        phone.Color = "Red"; 
+
+        //add a property
+        phone.Owner="Nathan";
+
+        //display the array
+        document.getElementById('example6').innerHTML = "The owner of the phone is " + phone.Owner;
+    </script>
+
+
+</body>
+</html>

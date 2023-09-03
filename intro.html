@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Introduction</title>
+</head>
+<body>
+
+    <p><i>Example 1</i></p>
+      <h2>My First JavaScript</h2>
+     
+    <button type="button" onclick="document.getElementById('demo1').innerHTML =Date()">
+        Click to display Date and Time</button>
+
+            <p id="demo1"></p>
+
+    <br><br>
+
+    <p><i>Example 2</i></p>
+            <h2>What Can JavaScript Do?</h2>
+        <p id="demo2">JavaScript can change HTML content</p>
+        <button type="button" onclick='document.getElementById("demo2").innerHTML="I Love JavaScript!"'>
+         Click Me</button>
+
+         <br><br>
+
+         <p><i>Example 3</i></p>
+           
+        <h2>What Can JavaScript Do?</h2>
+
+            <p id="demo3">JavaScript can change the style of an HTML element</p>
+            <button type="button" onclick="document.getElementById('demo3').style.fontSize='40px'">Click To See</button>
+
+            <br><br>
+
+            <p><i>Example 4</i></p>
+            <h2>What Can JavaScript Do?</h2>
+
+            <p>JavaScript can change HTML attribute values.</p>
+              
+            <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+            <button onclick="document.getElementById('myImage').src='image/bulb_off.gif'">Turn off the Light</button>
+
+            <img id="myImage" src="image/bulb_off.gif" style="width:100px">
+            <button onclick="document.getElementById('myImage').src='image/bulb_on.gif'">Turn on the light</button>
+           
+            <br><br>
+
+            <p><i>Example 5</i></p> 
+            <h2>What Can JavaScript Do?</h2>
+            <p id="demo5">JavaScript can hide and show HTML elements</p>
+            <button type="button" onclick="document.getElementById('demo5').style.display='none'">Click to Hide</button>
+            <button type="button" onclick="document.getElementById('demo5').style.display='block'">Click to Display</button>
+        
+    </body>
+    </html>  
+</body>
+</html>

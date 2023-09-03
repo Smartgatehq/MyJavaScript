@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arithmetic</title>
+</head>
+<body>
+    <h1>JavaScript Arithmetic Operators</h1>
+    
+    <p>Arithmetic operators perform arithmetic on numbers (literals or variables).</p>
+
+    <h3>Arithmetic Operations</h3>
+    <p>A typical arithmetic operation operates on two numbers.</p>
+    <p>The two numbers can be literals:</p>
+
+    <p><i>Example 1</i></p>
+
+    <p id="example1"></p>
+
+    <script>
+        let x = 100 + 50;
+
+       document.getElementById('example1').innerHTML = x;
+
+       //window.alert(x);
+    </script>
+
+
+    <p><i>Example 2</i></p>
+
+    <p id="example2"></p>
+
+    <script>
+
+        let a = 10;
+        let b = 5;
+        let c = a * b;
+
+        //to output the result
+        document.getElementById('example2').innerHTML = c;
+
+    </script>
+
+
+    <p><i>Example 3</i></p>
+
+    <p id="example3"></p>
+
+    <script>
+
+        let s = 2;
+        let t = (100 / 5) * s;
+
+        document.getElementById('example3').innerHTML = t;
+
+    </script>
+
+
+    <h3>Increment (++) and Decrement (--) Operator</h3>
+
+    <p><i>Example 4</i></p>
+
+    <p id="example4"></p>
+
+    <script>
+
+        let ab = 5;
+        ab++;
+        // ab--;
+        
+        let ba = ab;
+
+        document.getElementById('example4').innerHTML = ba;
+
+    </script>
+
+    <h3>Exponential (**)</h3>
+
+    <p>The Exponential operator (**) and its the same as raise to power Math.pow() e.g x ** y and Math.pow(x,y)</p>
+
+        <p><i>Example 5</i></p>
+
+        <p id="example5"></p>
+
+        <script>
+
+            let cb = 5;
+
+         //   document.getElementById('example5').innerHTML = cb ** 2;
+
+            document.getElementById('example5').innerHTML = Math.pow(cb,3);
+
+        </script>
+
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Syntax</title>
+</head>
+<body>
+    
+    <h1>JavaScript Values</h1>
+
+    <h3>JavaScript Variables</h3>
+
+    <p>In a programming language, variables are used to store data values.</p>
+
+    <p>JavaScript uses the keywords var, let and const to declare variables.</p>
+
+    <p>An equal sign is used to assign values to variables.</p>
+
+    <p><i>Example 1</i></p>
+
+    <p>In this example, x is defined as a variable. Then, x is assigned (given) the value 6:</p>
+
+    <p id="example1"></p>
+
+    <script>
+        let x;
+        x = 6;
+        document.getElementById('example1').innerHTML = x;
+
+    </script>
+
+
+    <h3>JavaScript Operators</h3>
+    <p>JavaScript uses arithmetic operators ( + - * / ) to compute values:</p>
+    <p><i>Example 2</i></p>
+
+    <p id="example2"></p>
+
+    <script>
+        document.getElementById('example2').innerHTML=(5 + 2) * 10;
+
+    </script>
+
+
+    <p><i>Example 3</i></p>
+
+    <p>JavaScript uses an assignment operator ( = ) to assign values to variables:</p>
+
+    <p id="example3"></p>
+
+    <script>
+     let a, b, c;
+
+     a = 15;
+     b = 10;
+     c = a * b;
+
+     document.getElementById('example3').innerHTML = c;
+
+    </script>
+
+    <p><i>Example 4</i></p>
+    <h2>JavaScript Expressions</h2>
+
+    <p>Expressions compute to values.</p>
+    <p>Expressions can also contain variable values:</p>
+
+    <p id="example4"></p>
+
+    <script>
+    var m;
+    m = 10;
+    document.getElementById("example4").innerHTML = m * 20;
+    </script>
+
+    <h4>The values can be of various types, such as numbers and strings.</h4>
+
+    <p><i>Example 5</i></p>
+
+    <p id="example5"></p>
+
+    <script>
+    document.getElementById("example5").innerHTML = "John" + " "  + "Doe";
+    </script>
+
+    <p><i>Example 6</i></p>
+
+    <h4>The var keyword also tells the browser to create variables:</h4>
+
+       <h2>The var Keyword Creates Variables</h2>
+
+    <p id="example6"></p>
+
+    <script>
+        var s, t;
+        s = 5 + 10;
+        t = s * 20;
+
+        document.getElementById('example6').innerHTML = t;
+    </script>
+
+
+    <p><i>Example 7</i></p>
+
+    <h2>JavaScript is Case Sensitive</h2>
+
+    <p>All JavaScript identifiers are case sensitive.</p>
+
+    <p>The variables lastName and lastname, are two different variables:</p>
+
+  
+    <p>Try to change lastName to lastname.</p>
+
+    <p id="example7"></p>
+
+    <script>
+    let lastname, lastName;
+    lastName = "Ose";
+    lastname = "Nathan";
+    document.getElementById("example7").innerHTML = lastName;
+    </script>
+
+
+
+ </body>
+</html>

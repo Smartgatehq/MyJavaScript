@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+</head>
+<body>
+
+    <h1>JavaScript Operators</h1>
+
+    <h3>Types of JavaScript Operators</h3>
+
+    <h4>1. JavaScript Arithmetic Operators</h4>
+
+    <p>Arithmetic Operators are used to perform arithmetic on numbers:</p>
+
+    <p><i>Example 1</i></p>
+
+    <p id="example1"></p>
+
+    <script>
+        let a = 3;
+        let x = (100 + 50) * a;
+
+        document.getElementById('example1').innerHTML = x;
+    </script>
+
+
+    <h4>JavaScript Assignment Operators</h4>
+    <p>Assignment operators assign values to JavaScript variables.</p>
+    <p>The Addition Assignment Operator (+=) adds a value to a variable.</p>
+
+    <p><i>Example 2</i></p>
+
+    <p id="example2"></p>
+
+    <script>
+
+        let w = 10;
+        w += 5;
+
+        document.getElementById('example2').innerHTML = w;
+
+    </script>
+
+    <h4>JavaScript Comparison Operators</h4>
+
+    <p>This is used to compare two variables</p>
+
+    <p><i>Example 3</i></p>
+
+    <p id="example3"></p>
+
+    <script>
+
+        let text1 = "A";
+        let text2 = "B";
+        let result = text1 < text2;
+
+        document.getElementById("example3").innerHTML = "Is A less than B? " + result;
+
+    </script>
+
+
+    <h4>JavaScript String Addition</h4>
+    <p>The + can also be used to add (concatenate) strings:</p>
+
+    <p><i>Example 4</i></p>
+
+    <p id="example4"></p>
+
+    <script>
+
+        let fName = "Ose";
+        let lName = "Nathan";
+
+        let fullName = fName + " " + lName;
+
+        document.getElementById('example4').innerHTML = "The two names of my son is " + fullName; 
+
+    </script>
+
+    
+</body>
+</html>

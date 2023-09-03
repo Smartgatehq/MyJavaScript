@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <h3>Real Life Objects, Properties, and Methods</h3>
+    <p>In real life, a car is an object.</p>
+    <p>A car has properties like weight and color, and methods like start and stop:</p>
+
+    <p><i>Example 1</i></p>
+    <p>JavaScript variables are containers for data values.</p>
+    <p>This code assigns a simple value (Tecno) to a variable named phone:</p>
+
+    <p id="example1"></p>
+
+    <script>
+        let phone = "tecno";
+        document.getElementById('example1').innerHTML = phone;
+
+    </script>
+
+    <p><i>Example 2</i></p>
+    <p>Objects are variables too. But objects can contain many values.</p>
+    <p>This code assigns many values (Tecno, Spark, red) to a variable named phone2:</p>
+
+    <p id="example2"></p>
+
+    <script>
+        const phone2 = {type:"tecno", model:"Spark", color:"red"};
+        document.getElementById('example2').innerHTML = "My phone is " + phone2.type + " " 
+        + phone2.model + " " + phone2.color;  
+
+    </script>
+
+        <h3>Object Definition</h3>
+        <p>You define (and create) a JavaScript object with an object literal:</p>
+
+        <p><i>Example 3</i></p>
+
+        <p id="example3"></p>
+
+        <script>
+            const mySon = {
+                firstName:"Ose", 
+                middleName:"Nathan", 
+                lastName:"Isidahomen", 
+                age:2, height:"tall", 
+                sex:"boy"
+            };
+
+        // This can also be declared as
+
+        // const mySon = {firstName:"Ose", middleName:"Nathan", lastName:"Isidahomen", age:2, height:"tall", sex:"boy"};
+
+            //document.getElementById('example3').innerHTML = mySon.firstName + " " + mySon.middleName + " " + 
+            //mySon.lastName + " is " + mySon.age + " years old, and he is a very " + mySon.height + " " + mySon.sex;
+
+
+            //This can also be called as
+
+            document.getElementById('example3').innerHTML = mySon["firstName"] + " " + mySon["middleName"] + " " + 
+            mySon["lastName"] + " is " + mySon["age"] + " years old, and he is a very " + mySon["height"] + " " + mySon["sex"];
+        </script>
+
+
+        <h3>Object Methods</h3>
+        <p>Objects can also have methods.</p>
+        <p>Methods are actions that can be performed on objects.</p>
+        <p>Methods are stored in properties as function definitions.</p>
+        <p><i>A method is a function stored as a property.</i></p>
+
+        <h2><i>Example 4</i></h2>
+
+        <p id="example4"></p>
+
+        <script>
+            const person = {
+                 firstName: "John",
+                 lastName : "Doe",
+                 id       : 5566,
+                 fullName : function() {
+                 return this.firstName + " " + this.lastName;
+                }
+            };
+
+            // Accessing Object Methods
+
+           document.getElementById('example4').innerHTML = person.fullName();
+        </script>
+</body>
+</html>

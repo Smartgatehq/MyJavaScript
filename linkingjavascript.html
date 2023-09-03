@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linking Javascript</title>
+</head>
+<body>
+    
+    <h2>JavaScript in Body</h2>
+
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script>
+
+
+</body>
+</html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>In this example, a JavaScript function is placed in the <head> section of an HTML page.</p>
+    <script>
+        function myFunction() {
+          document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        </script>
+</head>
+
+<body>
+        <h2>Demo JavaScript in Head</h2>
+        
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>    
+
+</body>
+</html>    
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo JavaScript in Body</h2>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph still changed when script is placed in the body.";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+  <p>External JavaScript</p>
+  
+<h2>Demo External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>This example links to "link.js".</p>
+<p>(myFunction is stored in "link.js")</p>
+
+<script src="link.js"></script> 
+</body>
+</html>
