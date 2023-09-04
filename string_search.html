@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Search</title>
+</head>
+<body>
+    <h1>JavaScript String Search</h1>
+    <h3>String Search Methods</h3>
+    <ul>
+        <li>String indexOf()</li>
+        <li>String lastIndexOf()</li>
+        <li>String search()</li>
+        <li>String match()</li>
+        <li>String matchAll()</li>
+        <li>String includes()</li>
+        <li>String startsWith()</li>
+        <li>String endsWith()</li>
+    </ul>
+
+    <h2>JavaScript String indexOf()</h2>
+    <p>The indexOf() method returns the index (position) the first occurrence of a string in a string:</p>
+
+    <h2>JavaScript String lastIndexOf()</h2>
+    <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+
+    <p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
+
+
+    <h2><i>Example 1</i></h2>
+    <p>The position of the first occurrence of "locate" is:</p>
+
+    <p id="example1"></p>
+
+    <script>
+        let text = "Please locate where 'locate' occurs!";
+
+       // let index = text.indexOf("locate");
+
+       // The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+
+      // let index = text.lastIndexOf("locate");
+
+      // Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+       let index = text.lastIndexOf("Ose");
+
+        document.getElementById('example1').innerHTML = index;
+    </script>
+
+    <h2>JavaScript String search()</h2>
+    <p>The search() method searches a string for a string (or a regular expression)
+         and returns the position of the match:</p>
+
+         <h2><i>Example 2</i></h2>
+         <p>The position of the first occurrence of "locate" is:</p>
+
+         <p id="example2"></p>
+
+         <script>
+             let text2 = "Please locate where 'locate' occurs!";
+             // let index2 = text.search("locate");
+
+             // This can also be written as below
+
+             let index2 = text.search(/locate/);
+             document.getElementById("example2").innerHTML = index2; 
+        </script>
+
+        <h2>JavaScript String match()</h2>
+        <p>The match() method returns an array containing the results of matching
+            a string against a string (or a regular expression).</p>
+
+            <h2><i>Example 3</i></h2>
+
+            <p>Perform a search for "ain":</p>
+            <p id="example3"></p>
+
+            <script>
+                let text3 = "The rain in SPAIN stays mainly in the plain";
+
+                //const myArr = text3.match("ain");
+
+                const myArr = text3.match(/ain/g); // my code needs correction
+                document.getElementById('example3').innerHTML = myArr.lenght + " " + myArr;
+
+            </script>
+
+            <h2>JavaScript String matchAll()</h2>
+            <p>The matchAll() method returns an iterator containing the results of 
+                matching a string against a string (or a regular expression).</p>
+
+            <h2><i>Example 4</i></h2>
+
+            <p id="example4"></p>
+
+            <script>
+                let text4 = "I love cats. Cats are very easy to love. Cats are very popular."
+                const iterator = text4.matchAll("Cats");
+                document.getElementById('example4').innerHTML = Array.from(iterator);
+            </script>
+
+            <h2>JavaScript String includes()</h2>
+            <p>The includes() method returns true if a string contains a specified value.
+                Otherwise it returns false.</p>
+
+            <h2><i>Example 5</i></h2>
+
+            <p id="example5"></p>
+
+            <p>The includes() method is not supported in Internet Explorer.</p>
+
+            <script>
+                let text5 = "Hello world, welcome to the universe.";
+
+                // this will return TRUE
+               // document.getElementById('example5').innerHTML = text5.includes("world");
+
+                // this will return FALSE
+                document.getElementById('example5').innerHTML = text5.includes("Ose");
+            </script>
+
+
+            <h2>JavaScript String startsWith()</h2>
+            <p>The startsWith() method returns true if a string begins with a specified value.
+                Otherwise it returns false:</p>
+            
+            <h2>JavaScript String endsWith()</h2>
+            <p>The endsWith() method returns true if a string ends with a specified value.
+                Otherwise it returns false:</p>
+
+
+            <h2><i>Example 6</i></h2>
+            <p>Check if a string starts with "Hello":</p>
+
+            <p id="example6"></p>
+
+            <p>The startsWith() method is not supported in Internet Explorer.</p>
+
+            <script>
+                let text6 = "Hello World, welcome to the universe.";
+
+                // this will return TRUE
+                // document.getElementById('example6').innerHTML = text6.startsWith("Hello");
+
+                // This will return false
+
+               // document.getElementById('example6').innerHTML = text6.startsWith("to");
+
+                // Check if a string ends with "Universe":
+
+                // this will return TRUE
+
+                // document.getElementById('example6').innerHTML = text6.endsWith("universe.");
+
+                //A start position for the search can be specified:
+                //this will return true
+
+                document.getElementById('example6').innerHTML = text6.startsWith("World", 6);
+
+            </script>
+
+</body>
+</html>

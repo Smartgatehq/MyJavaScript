@@ -91,6 +91,98 @@
         }
     </script>
 
+    <h2>JavaScript String ReplaceAll()</h2>
+    <p>In 2021, JavaScript introduced the string method replaceAll():</p>
+
+    <h2><i>Example 4</i></h2>
+
+    <p id="example4"></p>
+
+    <script>
+        let sentence= "I love cats. Cats are very easy to love. Cats are very popular.";
+
+        sentence = sentence.replaceAll("Cats", "Dogs");
+        sentence = sentence.replaceAll("cats", "dogs");
+            
+        document.getElementById('example4').innerHTML = sentence;
+
+    </script>
+
+    <h2>Converting to Upper and Lower Case</h2>
+    <p>A string is converted to upper case with toUpperCase():</p>
+    <p>A string is converted to lower case with toLowerCase():</p>
+
+    <h2><i>Example 5</i></h2>
+    <p>Converting JavaScript String toUpperCase()</p>
+
+    <button onclick="myFunction()">Click Here</button>
+
+    <p id="example5">hello nathan</p>
+
+    <script>
+        function myFunction() {
+            let text5 = document.getElementById('example5').innerHTML;
+            document.getElementById('example5').innerHTML = text5.toUpperCase();
+
+        }
+    </script>
+
+        <h2><i>Example 6</i></h2>
+        <p>Converting JavaScript String toLowerCase()</p>
+
+        <button onclick="myFunction()">Click Here</button>
+
+        <p id="example6">HELLO WORLD!</p>
+
+        <script>
+            function myFunction() {
+                let text6 = document.getElementById('example6').innerHTML;
+                document.getElementById('example6').innerHTML = text6.toLowerCase();
+            }
+        </script>
+        
+
+        <h2>JavaScript String concat()</h2>
+        <p>concat() joins two or more strings:</p>
+
+        <h2><i>Example 7</i></h2>
+
+        <p id="example7"></p>
+
+        <script>
+            let firstName = "Ose";
+            let middleName = "Nathan";
+            let surName = "Isidahomen";
+            let fullName = firstName.concat(" ", middleName, " ", surName);
+
+            document.getElementById('example7').innerHTML = fullName;
+        </script>
+
+        <h2>JavaScript String trim()</h2>
+        <p>The trim() method removes whitespace from both sides of a string:</p>
+
+        <h2><i>Example 8</i></h2>
+
+        <p id="example8"></p>
+
+        <script>
+            let word1 = "             Hello World!           ";
+            //let word2 = word1.trim();
+           // let word2 = word1.trimStart();
+            let word2 = word1.trimEnd();
+
+            document.getElementById('example8').innerHTML =
+            "Length of word1 is " + word1.length + "<br>" + "Length of word2 is " + word2.length;
+
+        </script>
+
+        <p>Other trim methods are:</p>
+
+        <h3>JavaScript String trimStart()</h3>
+        <p>The trimStart() method works like trim(), but removes whitespace only from the start of a string.</p>
+
+        <h3>JavaScript String trimEnd()</h3>
+        <p>The trimEnd() method works like trim(), but removes whitespace only from the end of a string.</p>
 
 </body>
 </html>

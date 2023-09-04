@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Template Literals</title>
+</head>
+<body>
+    <h1>JavaScript Template Literals</h1>
+    <p>Synonyms:</p>
+    <ul>
+        <li>Template Literals</li>
+        <li>Template Strings</li>
+        <li>String Templates</li>
+        <li>Back-Tics Syntax</li>
+    </ul>
+
+    <h2>Back-Tics Syntax</h2>
+    <p><strong>Template Literals</strong> use back-ticks (``) rather than the quotes ("") to define a string:</p>
+
+    <p>With <strong>template literals</strong>, you can use both single and double quotes inside a string:</p>
+    <p><strong>Template literals</strong> allows multiline strings:</p>
+
+    <h2>Interpolation</h2>
+    
+    <p><strong>Template Literals</strong> provide an easy way to interpolate variables and expressions into strings.</p>
+    <p>The method is called string interpolation, and the syntax is ${...}</p>
+
+    <h2>Variable Substitutions</h2>
+
+   <p><strong>template literals</strong> allow variables in strings:</p>
+
+   <h2><i>Example 1</i></h2>
+
+    <p id="example1"></p>
+
+    <p>Template literals are not supported in Internet Explorer.</p>
+
+    <script>
+        let firstName = "Ose";
+        let lastName = "Isidahomen";
+        let msg = `Welcome ${firstName} ${lastName}!`;
+
+        document.getElementById('example1').innerHTML = msg;
+        
+    </script>
+
+    <p><i>Automatic replacing of variables with real values is called string interpolation.</i></p>
+
+    <h2>Expression Substitution</h2>
+    <p><strong>Template literals</strong> allow expressions in strings:</p>
+
+    <h2><i>Example 2</i></h2>
+
+    <p id="example2"></p>
+
+    <script>
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("example2").innerHTML = total;
+    </script>
+
+   <h2>HTML Templates</h2>
+
+   <h2><i>Example 3</i></h2>
+
+   <p id="example3"></p>
+
+    <script>
+        let header = "Template Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById('example3').innerHTML = html;
+    </script>
+  
+  
+</body>
+</html>
