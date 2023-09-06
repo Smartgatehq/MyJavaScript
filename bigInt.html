@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript BigInt</title>
+</head>
+<body>
+    <h1>JavaScript BigInt</h1>
+    <p>JavaScript BigInt variables are used to store big integer values that are too big to be
+        represented by a normal JavaScript Number.</p>
+
+    <h2>JavaScript Integer Accuracy</h2>
+    <p>JavaScript integers are only accurate up to 15 digits:</p>
+
+    <h2><i>Example 1</i></h2>
+    
+    <p id="example1"></p>
+
+    <h2>How to Create a BigInt</h2>
+
+    <p>To create a BigInt, append n to the end of an integer or call BigInt():</p>
+
+    <script>
+        let a = 999999999999999;
+        let b = 9999999999999999;
+
+        //How to Create a BigInt
+        let c = BigInt("9999999999999999");
+
+        // another way to create BigInt
+        let d = 9999999999999999n;
+
+        document.getElementById('example1').innerHTML = a + "<br>" + b + "<br>" + c + "<br>" + d;
+    </script>
+
+
+    <h2>BigInt: A new JavaScript Datatype</h2>
+
+    <p>The JavaScript typeof a BigInt is "bigint":</p>
+
+    <h2><i>Example 2</i></h2>
+
+    <p id="example2"></p>
+
+    <script>
+
+       // let e = BigInt("9999999999999999"); // this is BigInt
+
+        // let f = 9999999999999999n; // this is BigInt
+
+        // let g = 9999999999999999; // this is a number
+
+        // here I called the typeof a, c and d used in the previous example
+        document.getElementById('example2').innerHTML = typeof a + "<br>" + typeof c+ "<br>" + typeof d;
+    </script>
+
+    <p>BigInt is the second numeric data type in JavaScript (after Number).</p>
+
+    <p>With BigInt the total number of supported data types in JavaScript is 8:</p>
+
+    <ol>
+        <li>String</li>
+        <li>Number</li>
+        <li>Bigint</li>
+        <li>Boolean</li>
+        <li>Undefined</li>
+        <li>Null</li>
+        <li>Symbol</li>
+        <li>Object</li>
+    </ol>
+
+    <h2>BigInt Operators</h2>
+
+    <p>Operators that can be used on a JavaScript Number can also be used on a BigInt.</p>
+
+    <ul>
+        <li>Operators such as multiplication, division, addition and subraction can be used between <strong>BigInt</strong></li>
+        <li>Arithmetic operators are not allowed between a BigInt and Number</li>
+        <li>A BigInt can not have decimals</li>
+    </ul>
+
+    <h2><i>Example 3</i></h2>
+
+    <p id="example3"></p>
+
+    <script>
+        let x = 5n;
+        //let y = x / 2;
+
+        let z = Number(x) / 2; // explicit conversion is used to convert x to number here
+
+        // document.getElementById("example3").innerHTML = y;  // Error: Cannot mix BigInt and other types, use explicit conversion.
+
+        document.getElementById("example3").innerHTML = z;
+    </script>
+
+    
+</body>
+</html>
