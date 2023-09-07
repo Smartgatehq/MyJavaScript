@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <p>An array is a special variable, which can hold more than one value:</p>
+
+    <h2><i>Example 1</i></h2>
+    <p id="example1"></p>
+
+    <script>
+        let cars = ["Toyota", "Honda", "Audi"];
+
+        document.getElementById('example1').innerHTML = cars;
+    </script>
+
+
+    <h2>Creating an Array</h2>
+    <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+
+    <p>Syntax: >>> <strong>const array_name = [item1, item2, ...]; </strong></p>
+
+    <p><i>It is a common practice to declare arrays with the const keyword.</i></p>
+
+    <p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
+
+    <h2>Accessing Array Elements</h2>
+    <p>You access an array element by referring to the index number:</p>
+    <p><i>Note: Array indexes start with 0. [0] is the first element. [1] is the second element.</i></p>
+
+    <h2><i>Example 2</i></h2>
+    <p id="example2"></p>
+
+    <script>
+        let phones = ["Iphone", "Tecno", "Infinix"];
+
+        // document.getElementById('example2').innerHTML = phones[0];
+
+        // to change the value of an array
+        phones[0] = "Samsung";
+       // document.getElementById('example2').innerHTML = phones;
+
+        // converting arrays to string uses the string method tostring()
+
+        document.getElementById('example2').innerHTML = phones.toString();
+
+    </script>
+
+    <h2>Arrays are Objects</h2>
+    <p>Arrays are a special type of objects. The <i>typeof</i> operator in JavaScript returns "object" for arrays.</p>
+    <p>But, JavaScript arrays are best described as arrays.</p>
+    <br><br>
+
+    <p>Objects use names to access its "members". In this example, person.firstName returns John:</p>
+
+    <h2>Example 3</h2>
+
+    <p id="example3"></p>
+
+    <script>
+        let mySon = {firstName:"Ose", lastName:"Isidahomen", age:2};
+
+        document.getElementById('example3').innerHTML = mySon.firstName;
+    </script>
+
+    <h2>Array Elements Can Be Objects</h2>
+    <p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
+    <p>Because of this, you can have variables of different types in the same Array.</p>
+    <p>You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:</p>
+    
+    <h3>Array Properties and Methods</h3>
+    <p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+
+    <p><i>cars.length   // Returns the number of elements</i></p>
+    <p><i>cars.sort()   // Sorts the array</i></p>
+
+    <h2>The length Property</h2>
+    <p>The length property of an array returns the length of an array (the number of array elements).</p>
+    <p><i>The length property is always one more than the highest array index.</i></p>
+
+    <h2><i>Example 4</i></h2>
+
+    <p id="example4"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      //  document.getElementById('example4').innerHTML = fruits.length;
+
+        //Accessing the First Array Element
+        // document.getElementById('example4').innerHTML = fruits[0];
+
+        // Accessing the Last Array Element
+
+        document.getElementById('example4').innerHTML = fruits[fruits.length-1];
+    </script>
+
+    <h2>Looping Array Elements</h2>
+    <p>One way to loop through an array, is using a for loop:</p>
+
+    <h2><i>Example 5</i></h2>
+
+    <p id="example5"></p>
+
+    <script>
+        const names = ["Ose", "Nathan", "Bryan", "Joe"];
+
+        let nLen = names.length;
+
+        let text = "<ul>";
+        
+            for (let i = 0; i <nLen; i++) {
+          text += "<li>" + names[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("example5").innerHTML = text;
+
+    </script>
+
+
+    <h3>using foreach loop</h3>
+
+    <h2><i>Example 6</i></h2>
+    <p id="example6"></p>
+
+    <script>
+        const boys = ["Jude", "Steve", "Ray", "Peter"];
+
+        let txt = "<ul>";
+            boys.forEach(myFunction);
+            txt +="</ul>";
+
+        document.getElementById("example6").innerHTML = txt;
+
+        function myFunction(value)
+        txt +="<li>" + value + "</li>";
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Number Methods</title>
+</head>
+<body>
+    <h1>JavaScript Number Methods</h1>
+    <p>These number methods can be used on all JavaScript numbers:</p>
+    <ul>
+        <li>toString() >>>>	Returns a number as a string</li>
+        <li>toExponential() >>>	Returns a number written in exponential notation</li>
+        <li>toFixed()  >>>	Returns a number written with a number of decimals</li>
+        <li>toPrecision() >>>  Returns a number written with a specified length</li>
+        <li>ValueOf() >>> Returns a number as a number</li>
+    </ul>
+
+    <h2>The toString() Method</h2>
+
+    <p>The toString() method returns a number as a string.</p>
+
+    <p>All number methods can be used on any type of numbers (literals, variables, or expressions):</p>
+
+    <h2><i>Example 1</i></h2>
+
+    <p id="example1"></p>
+
+    <script>
+        let a = 123;
+
+        document.getElementById('example1').innerHTML = 
+        a.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+    </script>
+
+
+    <h2>Converting Variables to Numbers</h2>
+    <p>There are 3 JavaScript methods that can be used to convert a variable to a number:</p>
+
+    <ul>
+        <li>Number() >>> Returns a number converted from its argument.</li>
+        <li>parseFloat() >>> Parses its argument and returns a floating point number</li>
+        <li>parseInt() >>> Parses its argument and returns a whole number</li>
+    </ul>
+
+    <h3><i>The methods above are not number methods. They are global JavaScript methods.</i></h3>
+
+
+    <h2>The Number() Method</h2>
+    <p>The Number() method can be used to convert JavaScript variables to numbers:</p>
+
+    <p><i>If the number cannot be converted, NaN (Not a Number) is returned.</i></p>
+
+    <h2>The Number() Method Used on Dates</h2>
+    <p>Number() can also convert a date to a number.</p>
+
+
+    <h2><i>Example 2</i></h2>
+
+    <p id="example2"></p>
+
+    <script>
+        let b = new Date("1970-01-01");
+        document.getElementById('example2').innerHTML = Number(b);
+    </script>
+
+    <h2>The parseInt() Method</h2>
+    <p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+    <p>If the number cannot be converted, NaN (Not a Number) is returned.</p>
+
+    <h2>The parseFloat() Method</h2>
+    <p>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:</p>
+    <p><i>If the number cannot be converted, NaN (Not a Number) is returned.</i></p>
+
+    <h2>Number Object Methods</h2>
+    <p>These object methods belong to the Number object:</p>
+
+    <ul>
+        <li>Number.isInteger() >>> Returns true if the argument is an integer</li>
+        <li>Number.isSafeInteger() >>> Returns true if the argument is a safe integer</li>
+        <li>Number.parseFloat() >>> Converts a string to a number</li>
+        <li>Number.parseInt() >>> Converts a string to a whole number</li>
+    </ul>
+
+    <h2><i>Number Methods Cannot be Used on Variables</i></h2>
+    <p><i>The number methods above belong to the JavaScript Number Object.</i></p>
+    <p><i>These methods can only be accessed like Number.isInteger().</i></p>
+    <p><i>Using X.isInteger() where X is a variable, will result in an error:</i></p>
+    <p><i>TypeError X.isInteger is not a function.</i></p>
+
+    <h2>The Number.parseFloat() Method</h2>
+    <p>Number.parseFloat() parses a string and returns a number.</p>
+    <p>Spaces are allowed. Only the first number is returned:</p>
+    <p><i>If the number cannot be converted, NaN (Not a Number) is returned.</i></p>
+
+    <h2><i>NOTE:</i></h2>
+    <p><i>The Number methods Number.parseInt() and Number.parseFloat()</i></p>
+    <p><i>are the same as the</i></p>
+    <p><i>Global methods parseInt() and parseFloat().</i></p>
+
+    <p><i>The purpose is modularization of globals (to make it easier to use the same JavaScript code
+         outside the browser).</i></p>
+
+
+    <h2>The Number.parseInt() Method</h2>
+    <p>Number.parseInt() parses a string and returns a whole number.</p>
+    <p>Spaces are allowed. Only the first number is returned:</p>
+    <p><i>If the number cannot be converted, NaN (Not a Number) is returned.</i></p>
+
+
+</body>
+</html>
