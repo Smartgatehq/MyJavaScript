@@ -142,5 +142,53 @@
 
     </script>
 
+    <h2>Adding Array Elements</h2>
+    <p>The easiest way to add a new element to an array is using the push() method:</p>
+    <p>New element can also be added to an array using the length property:</p>
+
+    <h2><i>Example 7</i></h2>
+
+    <button onclick="myFunction()">Click Here</button>
+
+    <p id="example7"></p>
+
+    <script>
+        const clubs = ["Chelsea", "ManCity", "liverpool"];
+        document.getElementById('example7').innerHTML = clubs;
+
+        function myFunction() {
+            // using the push method
+           // clubs.push("Arsenal");
+
+            // using the length method
+
+            clubs[clubs.length] = "ManUtd";
+
+            document.getElementById('example7').innerHTML = clubs;
+        }
+    </script>
+
+        <h2><i>Exercise 1</i></h2>
+
+        <button onclick="myFunction()">Click Me</button>
+
+        <p id="exercise"></p>
+
+    <script>
+        const myActivities = ["Eat", "Code", "Sleep"];
+        
+        document.getElementById('exercise').innerHTML = myActivities;
+
+        function myFunction() {
+        
+                myActivities.push("Sing");
+
+       document.getElementById('exercise').innerHTML = myActivities;
+
+        }
+    </script>
+
+
+
 </body>
 </html>
