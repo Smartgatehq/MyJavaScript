@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+
+    <p>Below are the various array methods.</p>
+    <ol>
+        <li>Array length</li>
+        <li>Array toString()</li>
+        <li>Array pop()</li>
+        <li>Array push()</li>
+        <li>Array shift()</li>
+        <li>Array unshift()</li>
+        <li>Array join()</li>
+        <li>Array delete()</li>
+        <li>Array concat()</li>
+        <li>Array flat()</li>
+        <li>Array splice()</li>
+        <li>Array slice()</li>
+    </ol>
+
+<h2>JavaScript Array length</h2>
+<p>The length property returns the length (size) of an array:</p>
+
+<h2>JavaScript Array toString()</h2>
+<p>The JavaScript method toString() converts an array to a string of (comma separated) array values.</p>
+
+<h2>The join() method also joins all array elements into a string.</h2>
+<p>It behaves just like toString(), but in addition you can specify the separator:</p>
+
+<h2><i>Example 1</i></h2>
+
+<p id="example1"></p>
+
+<script>
+    const fruits = ['Banana', 'Apple', 'Oranges', 'Mango'];
+
+    // getting thd size i.e total numbers in the array
+    // document.getElementById('example1').innerHTML = fruits.length;
+
+    // returning an array as a string
+    // document.getElementById('example1').innerHTML = fruits.toString();
+
+    // The join() method
+    document.getElementById('example1').innerHTML = fruits.join(" + "); // change the operator to see
+
+
+</script>
+
+
+<h2>Popping and Pushing</h2>
+<p>The pop() method removes the last element from an array:</p>
+<p><i>The pop() method returns the value that was "popped out":</i></p>
+<p>The push() method adds a new element to an array (at the end):</p>
+<p><i>The push() method returns the new array length:</i></p>
+
+<h2><i>Example 2</i></h2>
+
+<p id="example2"></p>
+<p id="example2.2"></p>
+<p id="example2.3"></p>
+
+<script>
+    const city = ['lagos', 'Benin', 'London', 'Abuja'];
+   // document.getElementById('example2').innerHTML = city;
+   // city.pop();
+   // document.getElementById('example2.2').innerHTML = city;
+
+   // document.getElementById('example2.3').innerHTML = city.pop(); 
+
+    //using the push method to add
+     document.getElementById('example2').innerHTML = city;
+     city.push('Paris');
+     document.getElementById('example2.2').innerHTML = city;
+
+     // returning the array length
+     document.getElementById('example2.3').innerHTML = city.push();
+</script>
+
+<h2>JavaScript Array shift()</h2>
+<p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+<p>The shift() method returns the value that was "shifted out":</p>
+
+<h2>JavaScript Array unshift()</h2>
+<p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</p>
+
+
+<h2>Changing Elements</h2>
+<p>Array elements are accessed using their index number:</p>
+<h2>JavaScript Array length</h2>
+<p>The length property provides an easy way to append a new element to an array:</p>
+
+<h2><i>Example 3</i></h2>
+
+<p id="example3"></p>
+
+<script>
+    const country = ['USA', 'France', 'Mexico', 'China'];
+
+    // replacing Mexico which is in index 2 with Ghana
+    // country[2] = 'Ghana';
+
+    // adding a Ghana to the array
+    country[country.length] = 'Ghana';
+    document.getElementById('example3').innerHTML = country;
+</script>
+
+
+<h2>Merging (Concatenating) Arrays</h2>
+<p>The concat() method creates a new array by merging (concatenating) existing arrays:</p>
+<p><i>The concat() method does not change the existing arrays. It always returns a new array.</i></p>
+<p>The concat() method can take any number of array arguments:</p>
+
+<p>The concat() method can also take strings as arguments:</p>
+
+<h2><i>Example 4</i></h2>
+
+<p id="example4"></p>
+
+<script>
+    const myBoys = ['Nathan', 'Bryan'];
+    //const myGirls = ['Natalie', 'Amira'];
+    // const myChildren = myBoys.concat(myGirls);
+
+    //using strings in the argument
+    const myChildren = myBoys.concat('Nolan')
+
+    document.getElementById('example4').innerHTML = myChildren;
+</script>
+
+
+<h2>Splicing and Slicing Arrays</h2>
+<p>The splice() method adds new items to an array.</p>
+<p>The slice() method slices out a piece of an array.</p>
+
+<h2>JavaScript Array splice()</h2>
+<p>The splice() method can be used to add new items to an array:</p>
+
+<h2><i>Example 5</i></h2>
+
+<p id="example5"></p>
+
+<script>
+    const names = ['Steve', 'Harry', 'Ben', 'John', 'Emily'];
+    names.splice(2, 0, 'Nathan', 'Bryan' );
+
+    document.getElementById('example5').innerHTML = names;
+</script>
+
+<p>The first parameter (2) defines the position where new elements should be added (spliced in).</p>
+<p>The second parameter (0) defines how many elements should be removed.</p>
+<p>The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.</p>
+
+<p>The splice() method returns an array with the deleted items:</p>
+
+
+<h2>Using splice() to Remove Elements</h2>
+<p>With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:</p>
+
+<h2><i>Example 6</i></h2>
+
+<p id="example6"></p>
+
+<script>
+    const edoTowns = ['Ubiaja', 'uromi', 'Ekpoma', 'Auchi'];
+    edoTowns.splice(3, 1);
+    document.getElementById('example6').innerHTML = edoTowns;
+</script>
+
+<p>The first parameter (3) defines the position where new elements should be added (spliced in).</p>
+<p>The second parameter (1) defines how many elements should be removed.</p>
+<p>The rest of the parameters are omitted. No new elements will be added.</p>
+
+
+<h2>JavaScript Array slice()</h2>
+<p>The slice() method slices out a piece of an array into a new array.</p>
+<p>This example slices out a part of an array starting from array element 1 ("Arsenal"):</p>
+
+<h2><i>Example 7</i></h2>
+<p id="example7"></p>
+
+<script>
+    const clubs =['Arsenal', 'Chelsea', 'Liverpool', 'ManCity', 'RealMadrid'];
+    // const ManUtd = clubs.slice(1, 3);  // change the number to get a different result
+
+    // using two arguments
+    const ManUtd = clubs.slice(1, 3);
+
+    document.getElementById('example7').innerHTML = clubs + "<br>" + ManUtd;
+</script>
+
+<h2><i>Note</i></h2>
+<p><i>The slice() method creates a new array.</i></p>
+<p><i>The slice() method does not remove any elements from the source array.</i></p>
+
+<p>The slice() method can take two arguments like slice(1, 3).</p>
+<p>The method then selects elements from the start argument, and up to (but not including) the end argument.</p>
+<p>If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.</p>
+
+
+</body>
+</html>
