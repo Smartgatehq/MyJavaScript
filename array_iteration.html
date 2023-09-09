@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Iteration</title>
+</head>
+<body>
+    <h1>JavaScript Array Iteration</h1>
+    <p>Array iteration methods operate on every array item.</p>
+
+    <h3>JavaScript Array forEach()</h3>
+    <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+
+    <h2><i>Example 1</i></h2>
+    <p id="example1"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById('example1').innerHTML = txt;
+
+        function myFunction(value, index, array){
+            txt += value + "<br>";
+        }
+    </script>
+
+
+</body>
+</html>
