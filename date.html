@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Objects</title>
+</head>
+<body>
+    <h1>JavaScript Date Objects</h1>
+
+    <p>JavaScript Date Objects let us work with dates:</p>
+
+    <h2><i>Example 1</i></h2>
+
+    <h3>Using new Date()</h3>
+    <p>new Date() without arguments, creates a date object with the current date and time:</p>
+    
+    <p id="example1"></p>
+
+    <script>
+        const d = new Date();
+        document.getElementById('example1').innerHTML = d;
+    </script>
+
+    <h2>new Date(year, month, ...)</h2>
+    <p>new Date(year, month, ...) creates a date object with a specified date and time.</p>
+    <p>7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</p>
+    <h3><i>Note:</i></h3>
+    <p><i>JavaScript counts months from 0 to 11:</i></p>
+    <h3><i>January = 0.</i></h3>
+    <h3><i>December = 11.</i></h3>
+    <p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+
+    <h2><i>Example 2</i></h2>
+    <p id="example2"></p>
+
+    <script>
+        const a = new Date(2023, 8, 24, 12, 30, 50, 45);
+        document.getElementById('example2').innerHTML = a;
+    </script>
+
+
+
+
+
+</body>
+</html>
