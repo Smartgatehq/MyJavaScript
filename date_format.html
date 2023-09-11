@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Formats</title>
+</head>
+<body>
+    <h1>JavaScript Date Formats</h1>
+    <h2>JavaScript Date Input</h2>
+    <p>There are generally 3 types of JavaScript date input formats:</p>
+    <img src="image/code_sample/date_format.PNG" alt="Date Format">
+
+    <h2>JavaScript Date Output</h2>
+    <p>Independent of input format, JavaScript will (by default) output dates in full text string format:</p>
+    <img src="image/code_sample/date2.PNG" alt="">
+
+    <h2>JavaScript ISO Dates</h2>
+    <p>ISO 8601 is the international standard for the representation of dates and times.</p>
+    <p>The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:</p>
+
+    <h2><i>Example 1</i></h2>
+    <p>The computed date will be relative to your time zone.</p>
+    <p>Depending on your time zone, the result below will vary between March 24 and March 25.</p>
+    <p>ISO dates can be written without specifying the day (YYYY-MM):</p>
+    <p><i>Time zones will vary the result above between February 28 and March 01.</i></p>
+   <p> ISO dates can be written without month and day (YYYY):</p>
+   <p><i>Time zones will vary the result above between December 31 2014 and January 01 2015.</i></p>
+
+    <p id="example1"></p>
+
+    <script>
+    //const d = new Date("2015-03-25");
+
+    // without specifying the day
+    //const d = new Date("2015-03");
+
+    //without specifying the day and month
+    const d = new Date("2015");
+
+    document.getElementById("example1").innerHTML = d;
+    </script>
+
+    
+    <h2>ISO Dates (Date-Time)</h2>
+    <p>ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):</p>
+    <p>Date and time is separated with a capital T.</p>
+    <p>UTC time is defined with a capital letter Z.</p>
+    <p>If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead:</p>
+    <p><i>UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).</i></p>
+    <i>Omitting T or Z in a date-time string can give different results in different browsers.</i>
+
+
+    <h2><i>Exampe 2</i></h2>
+    <p id="example2"></p>
+
+    <script>
+        const a = new Date("2015-03-25T12:00:00Z");
+        document.getElementById("example2").innerHTML = d;
+    </script>
+</body>
+</html>
