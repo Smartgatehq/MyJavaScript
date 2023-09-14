@@ -59,9 +59,10 @@
 
     <h2><i>Example 2</i></h2>
     <p>If today is neither Saturday (6) nor Sunday (0), write a default message:</p>
+    <p><i>The default case does not have to be the last case in a switch block:</i></p>
+    <p><i>If default is not the last case in the switch block, remember to end the default case with a break.</i></p>
 
     
-
     <p id="example2"></p>
 
     <script>
@@ -82,5 +83,67 @@
 
     </script>
 
+
+    <h2>Common Code Blocks</h2>
+    <p>Sometimes you will want different switch cases to use the same code.</p>
+    <p>In this example below, case 4 and 5 share the same code block, and 0 and 6 share another code block:</p>
+
+    <h2><i>Example 3</i></h2>
+
+    <p id="example3"></p>
+
+    <script>
+        let say;
+        switch (new Date().getDay()) {
+            default:
+                say = "Which day is it?"
+            break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                say = "It's a work day";
+            break;
+
+            case 5:
+            case 6:
+            case 0:
+                say = "It's the Weekend";
+        }
+
+        document.getElementById('example3').innerHTML = say;
+    </script>
+
+    <h2>Switching Details</h2>
+    <p>If multiple cases matches a case value, the first case is selected.</p>
+    <p>If no matching cases are found, the program continues to the default label.</p>
+    <p>If no default label is found, the program continues to the statement(s) after the switch.</p>
+
+    <h2>Strict Comparison</h2>
+    <p>Switch cases use <strong>strict</strong> comparison (===).</p>
+    <p>The values must be of the same type to match.</p>
+    <p>A strict comparison can only be true if the operands are of the same type.</p>
+    <p>In this example below, there will be no match for x:</p>
+
+
+    <h2><i>Example 4</i></h2>
+
+    <p id="example4"></p>
+
+    <script>
+        let x = "0";
+
+        switch (x) {
+        case 0:
+           x = "Off";
+            break;
+        case 1:
+            x = "On";
+            break;
+        default:
+       x = "No value found";
+    }
+    document.getElementById("example4").innerHTML = x;
+</script>
 </body>
 </html>
