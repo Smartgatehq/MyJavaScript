@@ -144,6 +144,36 @@
        x = "No value found";
     }
     document.getElementById("example4").innerHTML = x;
-</script>
+
+    </script>
+
+    <h2>Example 5</h2>
+
+    <p id="example5"></p>
+
+    <img src="image/code_sample/Capture6.PNG" alt="">
+
+    <script>
+        let athleteFinalPosition = 'fifth place';
+        let soccer;
+
+        switch (athleteFinalPosition) {
+        case 'first place':
+        soccer = 'You get the gold medal!';
+        break;
+        case 'second place':
+        soccer = 'You get the silver medal!';
+        break;
+        case 'third place':
+        soccer = 'You get the bronze medal!';
+        break;
+
+        default:
+        soccer = 'Medal Otilo!';
+        break;
+        }
+
+        document.getElementById('example5').innerHTML = soccer;
+    </script>
 </body>
 </html>

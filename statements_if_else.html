@@ -81,5 +81,39 @@
 
         document.getElementById('example3').innerHTML = greet;
      </script>
+
+
+     <h2>Using if..else statement to recongnize a username and customise a greeting for the user</h2>
+
+     <h2>Example 4</h2>
+
+     <p id="example4"></p>
+
+     <img src="image/code_sample/Capture5.PNG" alt="">
+
+     <script>
+
+            // empty username 
+          //  let username = "";
+
+          // define username
+          let username = "Ose";
+
+       //   let defaultName;
+
+          //Using a shorthand
+
+            let defaultName = username || "Not a user";
+
+            if (username) {
+                defaultName = username;
+            } else {
+                defaultName = 'Not a User'
+            }
+
+         //   document.getElementById('example4').innerHTML = defaultName;
+
+         document.getElementById('example4').innerHTML = "Welcome to dashboard " + defaultName + " !";
+     </script>
 </body>
 </html>
