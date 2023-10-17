@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript For In Loop</title>
+    </head>
+    <body>
+        <h1>The For In Loop</h1>
+        <p>The JavaScript for in statement loops through the properties of an Object:</p>
+
+        <dl>
+            Syntax:
+            <li>for (key in object) { <br>
+                // code block to be executed<br>
+                }
+            </li>
+        </dl>
+
+        <h2><i>Example 1</i></h2>
+        <p id="example1"></p>
+        <script>
+            const person = {fname:"John", lname:"Doe", age:25, gender:"male"}; 
+        
+            let txt = "";
+            for (let x in person) {
+            txt += person[x] + " ";
+            }
+        
+            document.getElementById("example1").innerHTML = txt;
+        </script>
+
+        <h2>Example Explained</h2>
+        <ul>
+            <li>The for in loop iterates over a person object</li>
+            <li>Each iteration returns a key (x)</li>
+            <li>The key is used to access the value of the key</li>
+            <li>The value of the key is person[x]</li>
+        </ul>
+        <br>
+        <br>
+
+        <h2>For In Over Arrays</h2>
+        <p>The JavaScript for in statement can also loop over the properties of an Array:</p>
+
+        <dl>
+            Syntax:
+            <li>for (variable in array) { <br>
+                code<br>
+              }
+            </li>
+        </dl>
+
+
+        <h2>Example 2</h2>
+        
+        <p id="example2"></p>
+
+        <script>
+            const numbers = [45, 4, 9, 16, 25];
+
+            let num = "";
+            for (let x in numbers) {
+             num += numbers[x] + "<br>"; 
+            }
+
+            document.getElementById("example2").innerHTML = num;
+        </script> <br>
+
+        <p>Do not use <b>for in</b> over an Array if the index <b>order</b> is important. <br>
+
+            The index order is implementation-dependent, and array values may not be accessed
+            in the order you expect. <br>            
+            It is better to use a <b>for loop</b>, a <b>for of loop</b>, or <b>Array.forEach()</b>
+            when the order is important.
+        </p>
+        <br>
+        <br>
+
+        <h2>Array.forEach()</h2>
+        <p>The <b>forEach()</b> method calls a function (a callback function) once for each array element.</p>
+
+        <h2><i>Example 3</i></h2>
+        <p id="example3"></p>
+
+        <script>
+            const numbers2 = [45, 4, 9, 16, 25];
+            
+            let txt2 = "";
+            numbers2.forEach(myFunction);
+            document.getElementById("example3").innerHTML = txt2;
+            
+            function myFunction(value, index, array) {
+              txt2 += value + "<br>"; 
+            }
+        </script>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+        <button><a href="loop.html">PREVIOUS</a></button>
+        <button><a href="for_in_loop.html">NEXT</a></button>
+    </body>
+</html>
