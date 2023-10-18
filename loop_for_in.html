@@ -94,20 +94,33 @@
               txt2 += value + "<br>"; 
             }
         </script>
-            
+            <br><br>
 
+            <p>Note that the function takes 3 arguments:</p>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br><br>
+            <p>The example above uses only the value parameter. It can be rewritten as the example below:</p>
 
+            <h2><i>Example 4</i></h2>
+            <p id="example4"></p>
 
+        <script>
+            const numbers4 = [45, 4, 9, 16, 25];
 
+            let txt4 = "";
+            numbers4.forEach(myFunction);
+            document.getElementById("example4").innerHTML = txt4;
 
-
-
-
-
-
-
+            function myFunction(value) {
+            txt4 += value + "<br>"; 
+            }
+        </script>
 
         <button><a href="loop.html">PREVIOUS</a></button>
-        <button><a href="for_in_loop.html">NEXT</a></button>
+        <button><a href="loop_for_of.html">NEXT</a></button>
     </body>
 </html>

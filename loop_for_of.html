@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript for of loop</title>
+</head>
+<body>
+
+    <h1>The For Of Loop</h1>
+    <p>The JavaScript <b>for of</b> statement loops through the values of an iterable object.</p>
+    <p>It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:</p>
+
+    <dl>Syntax:
+        <li>for (variable of iterable) { <br>
+            // code block to be executed <br>
+          }
+        </li>
+    </dl>
+
+    <p>
+        <b>variable - </b> For every iteration the value of the next property is assigned to the variable. <br>
+        Variable can be declared with <b>const, let, or var</b>.
+    </p>
+    <p><b>iterable</b> - An object that has iterable properties.</p>
+
+    <h2>Looping over an Array</h2>
+
+    <h2><i>Example 1</i></h2>
+
+    <p id="example1"></p>
+
+    <script>
+        const cars = ["BMW", "Volvo", "Honda"];
+        
+        let text = "";
+        for (let x of cars) {
+          text += x + "<br>";
+        }
+        
+        document.getElementById("example1").innerHTML = text;
+    </script>
+
+    <h2>Looping over a String</h2>
+    <h2><i>Example 2</i></h2>
+    <p id="example2"></p>
+
+    <script>
+        let language = "JavaScript";
+
+        let text2 = "";
+        for (let x of language) {
+        text2 += x + "<br>";
+        }
+
+        document.getElementById("example2").innerHTML = text2;
+    </script>
+
+
+
+    <button><a href="loop_for_in.html">PREVIOUS</a></button>
+    <button><a href="loop_while.html">NEXT</a></button>
+</body>
+</html>
