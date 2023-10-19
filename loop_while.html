@@ -44,11 +44,80 @@
     <h2>The Do While Loop</h2>
     <p>The <b>do while loop</b> is a variant of the while loop. This loop will execute the code block once, <br>
         before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+    
+    <dl> Syntax:
+        <li>do { <br>
+            code block to be executed <br>
+            } <br>
+            while (condition);
+        </li>
+    </dl>
 
+    <h2><i>Example 2</i></h2>
+    <p>
+        The example below uses a <b>do while loop</b>. The loop will always be executed at least once, <br>
+        even if the condition is false, because the code block is executed before the condition is tested:
+    </p>
 
+    <p id="example2"></p>
+    <p id="demo"></p>
+
+    <script>
+        let text2 = ""
+        let i2 = 0;
+
+        do {
+        text2 += "<br>The number is " + i2;
+        i2++;
+        }
+        while (i2 < 10);  
+
+        document.getElementById("example2").innerHTML = text2;
+    </script>
+
+    <p><i><b>Note:</b>Do not forget to increase the variable used in the condition, otherwise the loop will never end!</i></p>
+
+    <h2>Comparing For and While</h2>
+    <p>
+        If you have read the previous chapter, about the <b>for loop</b>, you will discover that a <b>while loop</b><br>
+        is much the same as a <b>for loop</b>, with statement 1 and statement 3 omitted.    
+    </p>
+
+    <p>The loop in the example below uses a for loop to collect the car names from the cars array:</p>
+
+    <h2><i>Example 3</i></h2>
+    <p id="example3"></p>
+
+    <script>
+        const boys = ["John", "Mike", "Evans", "Joe"];
+        let b = 0;
+        let names = "";
+
+        for (;boys[b];) {
+            names += boys[b] + "<br>";
+            b++;
+        }
+
+        document.getElementById('example3').innerHTML = names;
+    </script> <br><br>
+
+    <p>The loop in this example uses a <b>while loop</b> to collect the car names from the cars array:</p>
+    
+    <h2><i>Example 4</i></h2>
+    <p id="example4"></p>
+    <script>
+        const girls = ["Eve", "Joy", "Rita", "Kate"];
+        let g = 0;
+        let name = "";
+        while (girls[g]) {
+            name += girls[g] + "<br>";
+            g++;
+        }
+        document.getElementById('example4').innerHTML = name;
+    </script>
 
 
     <button><a href="loop_for_of.html">PREVIOUS</a></button>
-    <button><a href="loop_for_of.html">NEXT</a></button>
+    <button><a href="breaks.html">NEXT</a></button>
 </body>
 </html>
