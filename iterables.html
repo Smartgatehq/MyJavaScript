@@ -27,9 +27,35 @@
 
     </dl>
 
+    <h2>Iterating</h2>
+    <p>Iterating is easy to understand.</p>
+    <p>It simply means looping over a sequence of elements.</p>
+    <p>Here are some easy examples:</p>
+    <ul>
+        <li>Iterating over a String</li>
+        <li>Iterating over an Array</li>
+    </ul>
+
+
+    <h2>Iterating Over a String</h2>
+    <p>You can use a for..of loop to iterate over the elements of a string:</p>
+
     <h2><i>Example 1</i></h2>
 
-    <p id="demo"></p>
+    <p id="example1"></p>
+
+    <script>
+        // Create a String
+        const name = "TechMate";
+
+        // List all Elements
+        let text = ""
+        for (const x of name) {
+        text += x + "<br>";
+        }
+
+        document.getElementById("example1").innerHTML = text;
+    </script>
 
 
     <button><a href="breaks.html">PREVIOUS</a></button>
