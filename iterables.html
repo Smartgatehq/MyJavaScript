@@ -90,8 +90,27 @@
         for (const element of mySet){
             sText += element +"<br>" ;
         }
-        document.getElementById("example3").innerHTML=sText;
-       
+        document.getElementById("example3").innerHTML=sText;       
+    </script>
+
+    <h2>Iterating Over a Map</h2>
+    <p>And you can iterate over key-value pairs in a map using a for..of loop:</p>
+
+    <h2><i>Example 4</i></h2>
+    <p id="example4"></p>
+
+    <script>
+        // Create a Map
+        const myMap = new Map();
+        myMap.set('0', 'zero');
+        myMap.set('1', 'one');
+        myMap.set('2', 'two');
+        // Iterate over the Map
+        let mText = "";
+        for (const [key, value] of myMap){
+            mText += `${key}: ${value}<br>`;
+            }
+            document.getElementById("example4").innerHTML=mText;
     </script>
 
 
