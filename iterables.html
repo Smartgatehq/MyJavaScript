@@ -57,6 +57,43 @@
         document.getElementById("example1").innerHTML = text;
     </script>
 
+    <h2>Iterating Over an Array</h2>
+    <p>You can use a for..of loop to iterate over the elements of an Array:</p>
+
+    <h2><i>Example 2</i></h2>
+    <p id="example2"></p>
+
+    <script>
+        // Create aa Array
+        const letters = ["Honda","Audi","BMW", "Ford"];
+        
+        // List all Elements
+        let txt = "";
+        for (const x of letters) {
+          txt += x + "<br>";
+        }
+        
+        document.getElementById("example2").innerHTML = txt;
+    </script>
+
+    <h2>Iterating Over a Set</h2>
+    <p>You can also iterate over the elements of a set using a for..of loop:</p>
+
+    <h2><i>Example 3</i></h2>
+    <p id="example3"></p>
+
+    <script>
+        // Create a Set
+        const mySet = new Set(["Apple", "Orange", "Grapes"]);
+        // Iterate over the Set
+        let sText = "";
+        for (const element of mySet){
+            sText += element +"<br>" ;
+        }
+        document.getElementById("example3").innerHTML=sText;
+       
+    </script>
+
 
     <button><a href="breaks.html">PREVIOUS</a></button>
     <button><a href="js_breaks.html">NEXT</a></button>
