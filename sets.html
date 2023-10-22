@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sets</title>
+</head>
+<body>
+    <h1>JavaScript Sets</h1>
+    <p>A JavaScript Set is a collection of unique values.</p>
+    <p>Each value can only occur once in a Set.</p>
+
+    <h2>Essential Set Methods</h2>
+    <img src="image/code_sample/jssettable.PNG" alt=""> <br>
+
+    
+    <h2>How to Create a Set</h2>
+    <p>You can create a JavaScript Set by:</p>
+    <ul>
+        <li>Passing an Array to new Set()</li>
+        <li>Create a new Set and use add() to add values</li>
+        <li>Create a new Set and use add() to add variables</li>
+    </ul>
+
+    <h2>The new Set() Method</h2>
+    <p>Pass an Array to the new Set() constructor:</p>
+
+    <h2>Example 1</h2>
+    <p id="example1"></p>
+
+    <script>
+        // Create a Set
+        const letters = new Set(["a","b","c", "d"]);
+
+        // Display set.size
+        document.getElementById("example1").innerHTML = letters.size;
+    </script>
+
+    <p><i>Create a Set and add values:</i></p>
+
+    <h2><i>Example 2</i></h2>
+    <p id="example2"></p>
+    <script>
+        // Create a Set
+    const letters2 = new Set();
+
+    // Add Values to the Set
+    letters2.add("a");
+    letters2.add("b");
+    letters2.add("c");
+
+    // Display set.size
+    document.getElementById("example2").innerHTML = letters2.size;
+    </script>
+
+
+    <button><a href="iterables.html">PREVIOUS</a></button>
+    <button><a href="sets.html">NEXT</a></button>
+</body>
+</html>
